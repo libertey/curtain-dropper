@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124 800" width="1124" height="800">
+  <defs>
+    <linearGradient id="bg-d" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1d2e"/>
+      <stop offset="100%" stop-color="#2d3148"/>
+    </linearGradient>
+    <linearGradient id="accent-d" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a6cf7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7b5ea7" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1124" height="800" fill="url(#bg-d)"/>
+  <rect x="0" y="680" width="1124" height="120" fill="url(#accent-d)"/>
+  <circle cx="900" cy="250" r="180" fill="#4a6cf7" opacity="0.08"/>
+  <circle cx="200" cy="500" r="120" fill="#7b5ea7" opacity="0.06"/>
+  <rect x="60" y="40" width="4" height="720" fill="#4a6cf7" opacity="0.3" rx="2"/>
+  <text x="562" y="340" text-anchor="middle" font-family="system-ui,sans-serif" font-size="72" font-weight="700" fill="#ffffff" opacity="0.9">Curtain Dropper</text>
+  <text x="562" y="410" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="400" fill="#8b92b0">Demo Banner · Desktop</text>
+  <text x="562" y="460" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="300" fill="#5a6180">1124 × 800</text>
+  <rect x="412" y="520" width="300" height="52" rx="26" fill="#4a6cf7" opacity="0.15"/>
+  <text x="562" y="553" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="500" fill="#8ba4f7">Placeholder · Kein echtes Banner</text>
+</svg>

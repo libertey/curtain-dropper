@@ -1,0 +1,6 @@
+src/
+demo.js
+index.html
+vite.config.js
+.gitignore
+public/
