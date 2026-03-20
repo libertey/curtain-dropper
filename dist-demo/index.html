@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curtain Dropper — Demo Showcase</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0e1018;
+      color: #c8ccd8;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 40px 32px 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #6b7190;
+      line-height: 1.5;
+    }
+
+    .showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding: 16px 32px 48px;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .panel {
+      background: #161822;
+      border: 1px solid #252840;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .panel-header {
+      padding: 14px 18px;
+      border-bottom: 1px solid #252840;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .panel-header h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e0e2eb;
+    }
+    .panel-header .dims {
+      font-size: 12px;
+      color: #50567a;
+      font-weight: 400;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .panel-slot {
+      position: relative;
+      background: #0c0e16;
+      overflow: hidden;
+    }
+
+    /* Desktop */
+    .panel--desktop { width: 562px; }
+    .panel--desktop .panel-slot { width: 562px; height: 400px; }
+
+    /* Tablet */
+    .panel--tablet { width: 450px; }
+    .panel--tablet .panel-slot { width: 450px; height: 300px; }
+
+    /* Mobile */
+    .panel--mobile { width: 260px; }
+    .panel--mobile .panel-slot { width: 260px; height: 373px; }
+
+    .panel-footer {
+      padding: 10px 18px;
+      border-top: 1px solid #252840;
+      display: flex;
+      gap: 8px;
+    }
+    .panel-footer button {
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid #303450;
+      background: #1c1f30;
+      color: #8b92b0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .panel-footer button:hover {
+      background: #252840;
+      color: #c0c4d8;
+    }
+
+    .info {
+      padding: 20px 32px;
+      max-width: 1400px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: #444868;
+      line-height: 1.6;
+    }
+    .info code {
+      background: #1a1d2c;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
+  <script type="module" crossorigin src="/curtain-dropper/assets/index-D8pquC7B.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>🎭 Curtain Dropper — Showcase</h1>
+    <p>Drei Instanzen parallel in verschiedenen Formaten. Jeder Slot ist ein eigenständiger Container mit eigener CurtainDropper-Instanz.</p>
+  </div>
+
+  <div class="showcase">
+    <!-- Desktop -->
+    <div class="panel panel--desktop">
+      <div class="panel-header">
+        <h2>Desktop</h2>
+        <span class="dims">1124 × 800 → skaliert auf 562 × 400</span>
+      </div>
+      <div class="panel-slot" id="slot-desktop"></div>
+      <div class="panel-footer">
+        <button onclick="actions.desktop.restart()">↻ Restart</button>
+        <button onclick="actions.desktop.destroy()">✕ Destroy</button>
+      </div>
+    </div>
+
+    <!-- Tablet -->
+    <div class="panel panel--tablet">
+      <div class="panel-header">
+        <h2>Tablet</h2>
+        <span class="dims">900 × 600 → skaliert auf 450 × 300</span>
+      </div>
+      <div class="panel-slot" id="slot-tablet"></div>
+      <div class="panel-footer">
+        <button onclick="actions.tablet.restart()">↻ Restart</button>
+        <button onclick="actions.tablet.destroy()">✕ Destroy</button>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="panel panel--mobile">
+      <div class="panel-header">
+        <h2>Mobile</h2>
+        <span class="dims">390 × 560 → skaliert auf 260 × 373</span>
+      </div>
+      <div class="panel-slot" id="slot-mobile"></div>
+      <div class="panel-footer">
+        <button onclick="actions.mobile.restart()">↻ Restart</button>
+        <button onclick="actions.mobile.destroy()">✕ Destroy</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    Jede Instanz hat eigene IDs, eigene Config, eigene GPU-Ressourcen.<br>
+    <code>Restart</code> zerstört die alte Instanz und erstellt eine neue.
+    <code>Destroy</code> räumt auf ohne Neustart.
+  </div>
+
+</body>
+</html>

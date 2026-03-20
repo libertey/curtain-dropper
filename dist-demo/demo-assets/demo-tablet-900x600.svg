@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="bg-t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e2233"/>
+      <stop offset="100%" stop-color="#2a2f45"/>
+    </linearGradient>
+    <linearGradient id="accent-t" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b7ff7" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#5b7ff7" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg-t)"/>
+  <rect width="900" height="600" fill="url(#accent-t)"/>
+  <circle cx="720" cy="180" r="140" fill="#5b7ff7" opacity="0.07"/>
+  <circle cx="150" cy="420" r="100" fill="#8b6cc7" opacity="0.05"/>
+  <rect x="48" y="32" width="3" height="536" fill="#5b7ff7" opacity="0.25" rx="1.5"/>
+  <text x="450" y="255" text-anchor="middle" font-family="system-ui,sans-serif" font-size="56" font-weight="700" fill="#ffffff" opacity="0.9">Curtain Dropper</text>
+  <text x="450" y="315" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="400" fill="#8b92b0">Demo Banner · Tablet</text>
+  <text x="450" y="355" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="300" fill="#5a6180">900 × 600</text>
+  <rect x="320" y="400" width="260" height="44" rx="22" fill="#5b7ff7" opacity="0.12"/>
+  <text x="450" y="428" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="500" fill="#8ba4f7">Placeholder · Kein echtes Banner</text>
+</svg>

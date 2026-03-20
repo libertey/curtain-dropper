@@ -6,6 +6,19 @@ Flexibel einsetzbar als Overlay, in einem bestehenden DOM-Element, oder als eige
 
 ## Installation
 
+## Demo / GitHub Pages
+
+Für die lokale Demo bleibt `npm run dev` aktiv.
+
+Für GitHub Pages gibt es einen separaten Demo-Build, damit nicht der Library-Build, sondern die echte Showcase-Seite mit `index.html` veröffentlicht wird.
+
+```bash
+npm run build:demo
+```
+
+Der GitHub-Actions-Workflow deployed dafür den Output aus `dist-demo/`.
+
+
 ```bash
 npm install curtain-dropper
 ```
